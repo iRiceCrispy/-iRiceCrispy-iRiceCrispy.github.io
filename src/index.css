@@ -1,1 +1,38 @@
-/* TODO Add site wide styles */
+:root {
+  --color-charcoal: rgb(54, 69, 79);
+  --color-pastel-pink: rgb(248, 200, 220);
+  --color-off-white: rgb(250, 249, 246);
+}
+
+html, body, #root, #app {
+  height: 100%;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+#app {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+nav {
+  grid-area: 1 / 1 / 2 / 2;
+  height: 100%;
+  background-color: silver;
+  display: flex;
+}
+
+main {
+  grid-area: 1 / 2 / 2 / 3;
+  background-color: var(--color-charcoal);
+  color: var(--color-off-white);
+  overflow: auto;
+
+}
+
+section {
+  min-height: 100%;
+}
