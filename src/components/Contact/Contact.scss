@@ -1,0 +1,19 @@
+#contact {
+  .icon {
+    font-size: 32px;
+  }
+}
+
+.contact {
+  padding: 8px 16px;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  opacity: 0.75;
+}
+
+.contact:hover {
+  opacity: 1;
+  text-decoration: underline;
+}

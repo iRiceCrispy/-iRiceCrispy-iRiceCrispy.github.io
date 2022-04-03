@@ -1,5 +1,5 @@
 import React from 'react';
-import './Skills.css';
+import './Skills.scss';
 
 const Skills = () => {
   const skills = [{
@@ -46,13 +46,15 @@ const Skills = () => {
   return (
     <section id='skills'>
       <h2 className='heading'>Skills</h2>
-      <div className='skills'>
-        {skills.map(skill => (
-          <div className='skill' key={skill.title}>
-            <div className='icon'>{skill.icon}</div>
-            <p className='title'>{skill.title}</p>
-          </div>
-        ))}
+      <div className='content'>
+        <div className='skills'>
+          {skills.map(skill => (
+            <div className='skill' key={skill.title}>
+              <div className='icon'>{skill.icon}</div>
+              <p className='title'>{skill.title}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

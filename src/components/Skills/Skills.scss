@@ -1,11 +1,4 @@
-#skills {
-  padding-top: 64px;
-  text-align: center;
-}
-
 .skills {
-  margin: 0 auto;
-  width: 75%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -24,6 +17,8 @@
   text-align: center;
 }
 
-.icon {
-  font-size: 64px;
+#skills {
+  .icon {
+    font-size: 64px;
+  }
 }
