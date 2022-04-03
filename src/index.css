@@ -9,6 +9,14 @@ html, body, #root, #app {
   margin: 0;
 }
 
+html {
+  font-family: sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 a {
   text-decoration: none;
 }
@@ -35,4 +43,8 @@ main {
 
 section {
   min-height: 100%;
+}
+
+section h2 {
+  font-size: 48px;
 }
