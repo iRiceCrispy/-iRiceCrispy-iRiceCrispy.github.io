@@ -1,0 +1,45 @@
+#about {
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .about {
+    display: flex;
+    align-items: center;
+    gap: 64px;
+  }
+
+  .profile {
+    grid-area: profile;
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 10px solid gray;
+  }
+
+  .detail {
+    padding: 8px 16px;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    opacity: 0.75;
+    font-size: 14px;
+  }
+
+  .detail .icon {
+    font-size: 28px;
+  }
+
+  .resume:hover {
+    opacity: 1;
+    text-decoration: underline;
+  }
+
+  .about {
+    line-height: 24px;
+  }
+}
