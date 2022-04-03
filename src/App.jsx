@@ -12,7 +12,7 @@ const App = () => (
     <nav>
       <Navigation />
     </nav>
-    <main id='content'>
+    <main>
       <Route path='/#home'><Home /></Route>
       <Route path='/#about'><About /></Route>
       <Route path='/#skills'><Skills /></Route>

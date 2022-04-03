@@ -1,10 +1,14 @@
 import React from 'react';
-import './Home.css';
+import './Home.scss';
 
 const Home = () => (
-  <section id='home'>
-    Home
-  </section>
+  <header id='home'>
+    <div className='content'>
+      <h1>Eric Huang</h1>
+      <p>Software Engineer</p>
+    </div>
+    <div className='filter' />
+  </header>
 );
 
 export default Home;
