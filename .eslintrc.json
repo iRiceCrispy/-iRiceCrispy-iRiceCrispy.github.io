@@ -46,6 +46,8 @@
         "namedComponents": "arrow-function",
         "unnamedComponents": "arrow-function"
       }
-    ]
+    ],
+    "react/prop-types": "off",
+    "jsx-a11y/click-events-have-key-events": "off"
   }
 }
