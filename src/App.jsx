@@ -9,11 +9,9 @@ import Contact from './components/Contact';
 
 const App = () => (
   <div id='app'>
-    <nav>
-      <Navigation />
-    </nav>
+    <Route path='/#home'><Home /></Route>
     <main>
-      <Route path='/#home'><Home /></Route>
+      <Navigation />
       <Route path='/#about'><About /></Route>
       <Route path='/#skills'><Skills /></Route>
       <Route path='/#projects'><Projects /></Route>

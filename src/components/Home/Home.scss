@@ -7,12 +7,10 @@
   background-position: center;
   background-attachment: fixed;
   position: relative;
-}
 
-#home {
   .content {
     margin: auto;
-    padding: 36px;
+    padding: 64px;
     width: fit-content;
     height: fit-content;
     display: flex;
@@ -21,11 +19,12 @@
     position: sticky;
     top: 33%;
     z-index: 2;
+    user-select: none;
   }
 
   h1 {
     font-size: 54px;
-    padding: 12px;
+    padding: 12px 24px;
     margin-bottom: 24px;
     border-bottom: 1px solid;
   }

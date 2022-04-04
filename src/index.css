@@ -4,13 +4,19 @@
   --color-off-white: rgb(250, 249, 246);
 }
 
-html, body, #root, #app {
+html,
+body,
+#root,
+#app {
   height: 100%;
   margin: 0;
 }
 
 html {
   font-family: sans-serif;
+  background-color: var(--color-charcoal);
+  color: var(--color-off-white);
+  min-width: fit-content;
 }
 
 * {
@@ -24,38 +30,27 @@ a {
   color: inherit;
 }
 
-#app {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-}
-
-nav {
-  grid-area: 1 / 1 / 2 / 2;
-  height: 100%;
-  background-color: silver;
-  display: flex;
-}
-
 main {
-  grid-area: 1 / 2 / 2 / 3;
-  background-color: var(--color-charcoal);
-  color: var(--color-off-white);
-  overflow: auto;
-
+  padding-bottom: 64px;
 }
 
 section {
-  min-height: 100%;
-  padding-top: 64px;
+  min-height: max-content;
+  margin-bottom: 64px;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-section h2 {
-  margin: 0;
-  font-size: 42px;
-  text-align: center;
+section .heading {
+  font-size: 36px;
+  width: max-content;
+  padding: 0 36px 12px;
 }
 
-section .content {
-  margin: 64px auto 0;
-  width: 75%;
+.content {
+  padding: 32px;
+  width: 900px;
 }

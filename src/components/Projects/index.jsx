@@ -37,6 +37,7 @@ const projects = {
       'PostgreSQL',
       'SQLAlchemy',
       'Alembic',
+      'Finnhub API',
     ],
     thumbnail: robinsockPreview,
     github: 'https://github.com/pierikm/robinhood-clone',
