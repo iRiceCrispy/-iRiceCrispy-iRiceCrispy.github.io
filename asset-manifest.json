@@ -1,21 +1,20 @@
 {
   "files": {
     "main.css": "/static/css/main.d8f3b053.css",
-    "main.js": "/static/js/main.f1d33d66.js",
+    "main.js": "/static/js/main.1c662b5e.js",
     "static/media/gelp-home.png": "/static/media/gelp-home.bf53cc1f7f0614cbf1c7.png",
     "static/media/background.png": "/static/media/background.147665c763bc89472c39.png",
     "static/media/robinsock-home.png": "/static/media/robinsock-home.4a1663bdad1fee9cbfc0.png",
     "static/media/chaos-mano-home.png": "/static/media/chaos-mano-home.52e71211cfae365401d0.png",
     "static/media/bootstrap-icons.woff?": "/static/media/bootstrap-icons.c1d7432ee75fa194e499.woff",
     "static/media/bootstrap-icons.woff2?": "/static/media/bootstrap-icons.a13b815539b49de48d23.woff2",
-    "static/media/resume.pdf": "/static/media/resume.7c3329501dad90fbbc9a.pdf",
     "static/media/profile.png": "/static/media/profile.343cefa813beaca999d3.png",
     "index.html": "/index.html",
     "main.d8f3b053.css.map": "/static/css/main.d8f3b053.css.map",
-    "main.f1d33d66.js.map": "/static/js/main.f1d33d66.js.map"
+    "main.1c662b5e.js.map": "/static/js/main.1c662b5e.js.map"
   },
   "entrypoints": [
     "static/css/main.d8f3b053.css",
-    "static/js/main.f1d33d66.js"
+    "static/js/main.1c662b5e.js"
   ]
 }
