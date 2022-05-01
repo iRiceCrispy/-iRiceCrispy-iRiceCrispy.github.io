@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { forwardRef, useState } from 'react';
 import chaosManoPreivew from '../../assets/chaos-mano-home.png';
 import robinsockPreview from '../../assets/robinsock-home.png';
 import gelpPreview from '../../assets/gelp-home.png';
@@ -63,11 +63,11 @@ const projects = {
   },
 };
 
-const Projects = () => {
+const Projects = (_props, ref) => {
   const [currentProject, setCurrentProject] = useState(projects.chaosMano);
 
   return (
-    <section id='projects'>
+    <section id='projects' ref={ref}>
       <h2 className='heading'>Projects</h2>
       <div className='content'>
         <div className='previews'>
@@ -104,4 +104,4 @@ const Projects = () => {
   );
 };
 
-export default Projects;
+export default forwardRef(Projects);

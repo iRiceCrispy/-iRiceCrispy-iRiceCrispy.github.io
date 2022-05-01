@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import './Home.scss';
 
-const Home = () => (
-  <header id='home'>
+const Home = (_props, ref) => (
+  <header id='home' ref={ref}>
     <div className='content'>
       <h1>Eric Huang</h1>
       <p>Software Engineer</p>
@@ -11,4 +11,4 @@ const Home = () => (
   </header>
 );
 
-export default Home;
+export default forwardRef(Home);

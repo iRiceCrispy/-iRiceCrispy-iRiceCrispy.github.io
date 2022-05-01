@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import './Contact.scss';
 
-const Contact = () => (
-  <section id='contact'>
+const Contact = (_props, ref) => (
+  <section id='contact' ref={ref}>
     <h2 className='heading'>Contact Me</h2>
     <div className='content'>
       <a className='contact' href='mailto:huangeric.j@gmail.com'>
@@ -21,4 +21,4 @@ const Contact = () => (
   </section>
 );
 
-export default Contact;
+export default forwardRef(Contact);
