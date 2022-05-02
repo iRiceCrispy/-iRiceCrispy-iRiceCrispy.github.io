@@ -1,5 +1,5 @@
-import React, { useEffect, useRef, useState } from 'react';
-import { Redirect, Route, Switch, useLocation } from 'react-router-dom';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
+import { useHistory, useLocation } from 'react-router-dom';
 import Navigation from './components/Navigation';
 import Home from './components/Home';
 import About from './components/About';
@@ -7,67 +7,77 @@ import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 
-const App = () => {
+const App = ({ resume }) => {
+  const history = useHistory();
   const { pathname } = useLocation();
   const homeRef = useRef();
   const aboutRef = useRef();
   const skillsRef = useRef();
   const projectsRef = useRef();
   const contactRef = useRef();
-  const [currentRef, setCurrentRef] = useState(homeRef);
-  const [resume, setResume] = useState('');
-  const [isLoaded, setIsLoaded] = useState(false);
+  const [currentElement, setCurrentElement] = useState(null);
+  const [targetElement, setTargetElement] = useState(null);
+
+  const refs = useMemo(() => ({
+    home: homeRef,
+    about: aboutRef,
+    skills: skillsRef,
+    projects: projectsRef,
+    contact: contactRef,
+  }), []);
 
   useEffect(() => {
-    (async () => {
-      const res = await fetch('https://docs.google.com/document/d/1irOkn5n4OTZkBu2omhrv-Bm-5c7NoL6if-AU9UtxWjg/export?format=pdf');
-      const blob = await res.blob();
-      setResume(URL.createObjectURL(blob));
-      setIsLoaded(true);
-    })();
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            setCurrentElement(entry.target);
+          }
+        });
+      },
+      {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.7,
+      }
+    );
+
+    Object.values(refs).forEach(ref => {
+      observer.observe(ref.current);
+    });
+
+    return () => {
+      observer.disconnect();
+    };
+  }, [refs]);
+
+  useEffect(() => {
+    if (currentElement && !targetElement) {
+      const path = currentElement.id === 'home' ? '/' : `/${currentElement.id}`;
+      history.replace(path);
+    }
+
+    if (targetElement && currentElement === targetElement) setTargetElement(null);
+  }, [currentElement, targetElement, history]);
+
+  useEffect(() => {
+    const location = pathname.split('/')[1];
+    refs[location || 'home'].current.scrollIntoView({ behavior: 'smooth' });
   }, []);
 
-  useEffect(() => {
-    switch (pathname) {
-      case '/about':
-        setCurrentRef(aboutRef);
-        break;
-      case '/skills':
-        setCurrentRef(skillsRef);
-        break;
-      case '/projects':
-        setCurrentRef(projectsRef);
-        break;
-      case '/contact':
-        setCurrentRef(contactRef);
-        break;
-      default:
-        setCurrentRef(homeRef);
-    }
-  }, [pathname]);
+  return (
+    <div id='app'>
 
-  useEffect(() => {
-    currentRef.current?.scrollIntoView({ behavior: 'smooth' });
-  }, [isLoaded, currentRef]);
+      <Home ref={homeRef} />
+      <main>
+        <Navigation setTargetElement={setTargetElement} refs={refs} />
+        <About resume={resume} ref={aboutRef} />
+        <Skills ref={skillsRef} />
+        <Projects ref={projectsRef} />
+        <Contact ref={contactRef} />
+      </main>
 
-  return isLoaded && (
-  <div id='app'>
-    <Switch>
-      <Route exact path={['/', '/about', '/skills', '/projects', '/contact']}>
-        <Home ref={homeRef} />
-        <main>
-          <Navigation />
-          <About resume={resume} ref={aboutRef} />
-          <Skills ref={skillsRef} />
-          <Projects ref={projectsRef} />
-          <Contact ref={contactRef} />
-        </main>
-      </Route>
-      <Route>
-        <Redirect to='/' />
-      </Route>
-    </Switch>
-  </div>
+    </div>
   );
 };
 export default App;

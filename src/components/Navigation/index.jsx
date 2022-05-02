@@ -1,15 +1,63 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import './Navigation.css';
+import { NavLink } from 'react-router-dom';
+import './Navigation.scss';
 
-const Navigation = () => (
-  <nav>
-    <Link className='navLink' to='/'>Home</Link>
-    <Link className='navLink' to='/about'>About</Link>
-    <Link className='navLink' to='/skills'>Skills</Link>
-    <Link className='navLink' to='/projects'>Projects</Link>
-    <Link className='navLink' to='/contact'>Contact</Link>
-  </nav>
-);
+const Navigation = ({ refs, setTargetElement }) => {
+  const navTo = location => {
+    const target = refs[location].current;
+    target.scrollIntoView({ behavior: 'smooth' });
+    setTargetElement(target);
+  };
+
+  return (
+    <nav>
+      <NavLink
+        className='navLink'
+        activeClassName='active'
+        exact
+        to='/'
+        onClick={() => navTo('home')}
+      >
+        Home
+      </NavLink>
+      <NavLink
+        className='navLink'
+        activeClassName='active'
+        exact
+        to='/about'
+        onClick={() => navTo('about')}
+      >
+        About
+      </NavLink>
+      <NavLink
+        className='navLink'
+        activeClassName='active'
+        exact
+        to='/skills'
+        onClick={() => navTo('skills')}
+      >
+        Skills
+      </NavLink>
+      <NavLink
+        className='navLink'
+        activeClassName='active'
+        exact
+        to='/projects'
+        onClick={() => navTo('projects')}
+      >
+        Projects
+      </NavLink>
+      <NavLink
+        className='navLink'
+        activeClassName='active'
+        exact
+        to='/contact'
+        onClick={() => navTo('contact')}
+      >
+        Contact
+      </NavLink>
+    </nav>
+  );
+};
 
 export default Navigation;
