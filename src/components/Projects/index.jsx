@@ -1,10 +1,32 @@
 import React, { forwardRef, useState } from 'react';
+import whatToCookPreview from '../../assets/what-to-cook-home.png';
 import chaosManoPreivew from '../../assets/chaos-mano-home.png';
 import robinsockPreview from '../../assets/robinsock-home.png';
 import gelpPreview from '../../assets/gelp-home.png';
 import './Projects.scss';
 
 const projects = {
+  whatToCook: {
+    title: 'What To Cook',
+    description: '',
+    technologies: [
+      'JavaScript',
+      'Python',
+      'React',
+      'Redux',
+      'Flask',
+      'HTML',
+      'CSS',
+      'Material-UI',
+      'PostgreSQL',
+      'SQLAlchemy',
+      'Alembic',
+      'Firebase',
+    ],
+    thumbnail: whatToCookPreview,
+    github: 'https://github.com/iRiceCrispy/What-To-Cook',
+    livesite: 'https://whattocook.iricecrispy.dev/',
+  },
   chaosMano: {
     title: 'Chaos Mano',
     description: 'A boss drop tracker app.',
@@ -21,7 +43,7 @@ const projects = {
     ],
     thumbnail: chaosManoPreivew,
     github: 'https://github.com/iRiceCrispy/Chaos-Mano',
-    livesite: 'https://chaos-mano.herokuapp.com/',
+    livesite: 'https://chaosmano.iricecrispy.dev/',
   },
   robinSock: {
     title: 'RobinSock',
@@ -41,7 +63,7 @@ const projects = {
     ],
     thumbnail: robinsockPreview,
     github: 'https://github.com/pierikm/robinhood-clone',
-    livesite: 'https://robinsock.herokuapp.com/',
+    livesite: 'https://robinsock.iricecrispy.dev/',
   },
   gelp: {
     title: 'Gelp',
@@ -59,7 +81,7 @@ const projects = {
     ],
     thumbnail: gelpPreview,
     github: 'https://github.com/iRiceCrispy/Gelp',
-    livesite: 'https://yelpforgames.herokuapp.com/',
+    livesite: 'https://gelp.iricecrispy.dev/',
   },
 };
 
