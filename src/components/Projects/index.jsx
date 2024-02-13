@@ -8,7 +8,7 @@ import './Projects.scss';
 const projects = {
   whatToCook: {
     title: 'What To Cook',
-    description: '',
+    description: 'A recipe sharing app',
     technologies: [
       'JavaScript',
       'Python',
@@ -29,7 +29,7 @@ const projects = {
   },
   chaosMano: {
     title: 'Chaos Mano',
-    description: 'A boss drop tracker app.',
+    description: 'A boss drop tracker app for Maplestory.',
     technologies: [
       'JavaScript',
       'React',
@@ -47,7 +47,7 @@ const projects = {
   },
   robinSock: {
     title: 'RobinSock',
-    description: 'A paper trading app.',
+    description: 'A paper stock trading app.',
     technologies: [
       'JavaScript',
       'Python',
