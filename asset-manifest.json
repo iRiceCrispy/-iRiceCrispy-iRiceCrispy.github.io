@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.c8685f6f.css",
-    "main.js": "/static/js/main.ae288b51.js",
+    "main.js": "/static/js/main.d44642be.js",
     "static/media/gelp-home.png": "/static/media/gelp-home.bf53cc1f7f0614cbf1c7.png",
     "static/media/background.png": "/static/media/background.147665c763bc89472c39.png",
     "static/media/what-to-cook-home.png": "/static/media/what-to-cook-home.2dc53a8aa2cbede3f73c.png",
@@ -12,10 +12,10 @@
     "static/media/profile.png": "/static/media/profile.343cefa813beaca999d3.png",
     "index.html": "/index.html",
     "main.c8685f6f.css.map": "/static/css/main.c8685f6f.css.map",
-    "main.ae288b51.js.map": "/static/js/main.ae288b51.js.map"
+    "main.d44642be.js.map": "/static/js/main.d44642be.js.map"
   },
   "entrypoints": [
     "static/css/main.c8685f6f.css",
-    "static/js/main.ae288b51.js"
+    "static/js/main.d44642be.js"
   ]
 }
