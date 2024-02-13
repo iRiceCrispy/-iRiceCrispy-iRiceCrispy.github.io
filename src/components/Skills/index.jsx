@@ -5,11 +5,17 @@ const skills = [{
   title: 'JavaScript',
   icon: <i className='devicon-javascript-plain colored' />,
 }, {
-  title: 'Node.js',
-  icon: <i className='devicon-nodejs-plain colored' />,
-}, {
   title: 'Python',
   icon: <i className='devicon-python-plain colored' />,
+}, {
+  title: 'C#',
+  icon: <i className='devicon-csharp-plain colored' />,
+}, {
+  title: 'Java',
+  icon: <i className='devicon-java-plain colored' />,
+}, {
+  title: 'Node.js',
+  icon: <i className='devicon-nodejs-plain colored' />,
 }, {
   title: 'React',
   icon: <i className='devicon-react-original colored' />,
@@ -22,9 +28,6 @@ const skills = [{
 }, {
   title: 'Flask',
   icon: <i className='devicon-flask-original' />,
-}, {
-  title: 'Java',
-  icon: <i className='devicon-java-plain colored' />,
 }, {
   title: 'MongoDB',
   icon: <i className='devicon-mongodb-plain colored' />,
@@ -40,6 +43,24 @@ const skills = [{
 }, {
   title: 'Sequelize',
   icon: <i className='devicon-sequelize-plain colored' />,
+}, {
+  title: 'Mongoose',
+  icon: <i className='devicon-mongoose-original colored' />,
+}, {
+  title: 'Git',
+  icon: <i className='devicon-git-plain colored' />,
+}, {
+  title: 'Docker',
+  icon: <i className='devicon-docker-plain colored' />,
+}, {
+  title: 'Firebase',
+  icon: <i className='devicon-firebase-plain colored' />,
+}, {
+  title: 'DigitalOcean',
+  icon: <i className='devicon-digitalocean-original colored' />,
+}, {
+  title: 'Unity',
+  icon: <i className='devicon-unity-plain' />,
 }];
 
 const Skills = (_props, ref) => (
